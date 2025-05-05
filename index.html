@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+	<link rel="icon" href="favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		body {
+			font-family: 'Merriweather', Times, serif;
+			margin: 2em;
+		}
+
+		h1 {
+			font-size: 4em;
+			text-align: center;
+		}
+
+		h2 {
+			border-bottom: 1px solid;
+		}
+
+		ul {
+			list-style-type: circle;
+			padding-left: 1em;
+		}
+
+		ul li {
+			margin-top: 1em;
+		}
+
+		.contact-info {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.contact-info a {
+			color: black;
+		}
+
+		.info-block {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+
+		.info-block div {
+			width: 100%;
+		}
+	
+		.info-block .date-location {
+			text-align: right;
+		}
+
+		@media only screen and (min-width: 800px) {
+			.info-block div {
+				width: 48%;
+			}
+			.info-block ul {
+			width: 150%;
+			}	
+
+			.container {
+				margin-left: 20%;
+				margin-right: 20%;
+			}
+		}
+
+		@media only screen and (max-width: 800px) {
+			.container {
+				margin-left: 1%;
+				margin-right: 1%;
+			}
+			.info-block ul {
+			width: 100%;
+		}
+		}
+
+		.container {
+			border-bottom: 1px solid;
+		}
+        .project-images {
+  display: flex;
+  gap: 1rem; /* optional spacing between images */
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.project-image img {
+  height: 400px; /* or any height that fits your layout */
+  object-fit: contain;
+  border-radius: 8px; /* optional, for rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* optional, for a subtle shadow */
+}
+
+
+
+	</style>
+	<title>Erik Råberg</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Erik Råberg</h1>
+		<div class="contact-info">
+			<div>
+				Körsbärsvägen 9 <br>
+				Stockholm 114 23, Sweden <br>
+				<a href="tel:#">076 ### ## ##</a>
+			</div>
+			<div>
+				<a href="mailto:erik.j.raberg@gmail.com">erik.j.raberg@gmail.com</a> <br>
+				<a href="https://github.com/eybro/">www.github.com/eybro</a> <br>
+				<a href="https://www.linkedin.com/in/erik-raberg/">www.linkedin.com/in/erik-raberg</a>
+			</div>
+		</div>
+
+		<h2>Education</h2>
+		<ul>
+			<li class="info-block">
+				<div>
+					<strong>KTH Royal Institute of Technology</strong> <br>
+					Industrial Engineering and Management, specialization in Computer Science, Machine Learning
+				</div>
+				<div class="date-location">
+					2020 -- 2025 <br>
+					Stockholm, Sweden
+				</div>
+			</li>
+			<li class="info-block">
+				<div>
+					<strong>Politecnico di Milano</strong> <br>
+					Exchange semester, Computer Science
+				</div>
+				<div class="date-location">
+					Spring 2024<br>
+					Milan, Italy
+				</div>
+			</li>
+			<li class="info-block">
+				<div>
+					<strong>Nacka Gymnasium</strong> <br>
+					Technical program
+				</div>
+				<div class="date-location">
+					2017 -- 2020 <br>
+					Nacka, Sweden
+				</div>
+			</li>
+		</ul>
+
+		<!-- Work Experience -->
+		<h2>Work Experience</h2>
+		<ul>
+			<li class="info-block">
+				<div>
+					<strong>Product Owner</strong> <br>
+					Fastpool Sweden AB <br>
+					<ul>
+						<li>Responsible for prioritizing backlog, meeting customers, clarifying requirements and meet weekly with development team. Supervisor of development intern.</li>
+						
+					</ul>
+				</div>
+				<div class="date-location">
+					October, 2021 -- Present <br>
+					Stockholm, Sweden <br>
+				</div>
+			</li>
+			<li class="info-block">
+				<div>
+					<strong>Product & Operations Intern</strong> <br>
+					Fastdev AB <br>
+					<ul>
+						<li>Optimised Google Ads and SEO for fastdev.com, leading to a 300% increase in incoming leads.</li>
+						<li>Jira migration, transferring multiple on-premises projects to Jira Cloud and configuring customer service portals.</li>
+                        <li>Product Owner for "Matilda", an online ordering platform — oversaw the delivery of a back-office Android app for restaurant clients.</li>
+                        <li>Financial Administration - successfully recovered 300K SEK in missed invoicing</li>
+					</ul>
+				</div>
+				<div class="date-location">
+					March, 2022 -- Present<br>
+					Stockholm, Sweden <br>
+				</div>
+			</li>
+			<li class="info-block">
+				<div>
+					<strong>Technical Support</strong> <br>
+					Logmaster Systems AB <br>
+					<ul>
+						<li>Troubleshooting sql servers, databases, Logmaster applications and hardware, remote and onsite.</li>
+					</ul>
+				</div>
+				<div class="date-location">
+					May, 2022 -- February, 2024 <br>
+					Stockholm, Sweden <br>
+				</div>
+			</li>
+			
+			<li class="info-block">
+				<div>
+					<strong>Teaching Assistant, Industrial Economics</strong> <br>
+					KTH Royal Institute of Technology <br>
+					<ul>
+						<li>Taught exercise sessions and corrected exams.</li>
+					</ul>
+				</div>
+				<div class="date-location">
+					April, 2021 -- October, 2022 <br>
+					Stockholm, Sweden <br>
+				</div>
+			</li>
+		</ul>
+		
+		<!-- Other Experience -->
+		<h2>Other Experience</h2>
+		<ul>
+			<li>
+				<strong>Chapter Engagements:</strong> Responsible of IT-Group & Photography group, member of PR group iSpexet & PR group in Kravallen.
+			</li>
+		</ul>
+
+	
+		<!-- Skills -->
+		<h2>Skills</h2>
+		<ul>
+			<li>
+				<strong>Technologies:</strong> Python, Javascript, Java, SQL, HTML, CSS, React, Selenium, NumPy, PyTorch, Github Actions
+			</li>
+			<li>
+				<strong>Software:</strong> Git, Excel, Word, Powerpoint, Jira, Trello, Redmine, G Suite, Zendesk, SSMS, CAD, LaTeX
+			</li>
+		</ul>
+	</div>
+	<br>
+	<div class="container">
+		<h1>Projects</h1>
+		<h2>www.pubquery.se</h2>
+		<ul>
+			<li class="info-block">
+				<div>
+					I started working on pubquery.se in the beginning of 2023 with the aspiration to offer an easy way to find information about student pubs in Stockholm, through daily web scraping. 
+                    Today pubquery.se is a complete platform for student events in Stockholm, with<strong> 20,000 visits per month</strong> and <strong>30 participating student organizations</strong>. 
+					<br>
+					<br>
+					The platform is built with a full-stack architecture comprising a Selenium-based web scraper, a PHP and JavaScript frontend, an Express.js backend, and a MySQL database. It also includes an admin panel developed with Next.js and a real-time door counter app built using React and Vite. 
+                    All components of the system were developed solely by me.
+				</div>
+				<div class="date-location">
+					<a href="https://pubquery.se">https://pubquery.se</a>
+					<br>
+				</div>
+
+			</li>
+			<br>
+			<div class="project-images">
+				<div class="project-image">
+					<img src="pubquery_1.png" alt="Screenshot 1">
+				</div>
+                <div class="project-image">
+					<img src="pubquery_2.png" alt="Screenshot 1">
+				</div>
+				<div class="project-image">
+					<img src="pubquery_3.png" alt="Screenshot 3">
+				</div>
+			</div>
+		</ul>
+		<h2>Video From Image</h2>
+		<ul>
+			<li class="info-block">
+				<div>
+                    A complete ML system designed to help users identify the specific YouTube video and timestamp that correspond to their uploaded image, powered by a convolutional autoencoder model.
+				</div>
+				<div class="date-location">
+					<a href="https://github.com/volumetrader/VideoFromImage">https://github.com/volumetrader/VideoFromImage</a>
+					<br>
+				</div>
+
+			</li>
+			<br>
+			<div class="project-images">
+				<div class="project-image">
+					<img src="ML.png" alt="Screenshot 1">
+				</div>
+			</div>
+		</ul>
+		<h2>Instagram Story Automation</h2>
+		<ul>
+			<li class="info-block">
+				<div>
+					I automated the repetitive process of posting a weeekly Instagram story with the events of the week on the chapters Instagram account. This was done by using the google calendar API to fetch the events, Renderform to create a custom image and an Instragram API to post the image. Finally I used Github Actions to schedule the script to run every week.
+				</div>
+				<div class="date-location">
+					<a href="https://github.com/eybro/InstagramAutomation">https://github.com/eybro/InstagramAutomation</a>
+					<br>
+					<br>
+				</div>
+			</li>
+		</ul>
+        <h2>Zettle Retriever</h2>
+		<ul>
+			<li class="info-block">
+				<div>
+					I used Zettle's API to automatically gather all of the chapters transactions every week, count the number of beers sold, update this figure in a Suppabase database. This figure is then displayed on the chapters website. 
+				</div>
+                    <div class="date-location">
+					<a href="https://github.com/eybro/zettle_retriever">https://github.com/eybro/zettle_retriever</a>
+					<br>
+					<br>
+				</div>
+			</li>
+		</ul>
+        <h2>Smart Contract & Oracle Implementations</h2>
+		<ul>
+			<li class="info-block">
+				<div>
+					As my Bachelor's thesis in collaboration with the Swedish Central Bank, I developed a smart contract and two oracles for a decentralized conditional purchase. The first oracle was designed to fetch data from an external API, while the second utilized ChainLink.
+				</div>
+                    <div class="date-location">
+					<a href="https://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1792977&dswid=-1028">https://kth.diva-portal.org/...</a>
+					<br>
+					<br>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+
+</body>
+
+</html>
