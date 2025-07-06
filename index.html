@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +37,6 @@
 			margin-top: 1em;
 		}
 
-
 .contact-info div {
   display: flex;
   flex-direction: column;
@@ -65,28 +63,39 @@
 
 .contact-info a i {
   margin-right: 8px;
-  color: #0077b5; /* Default icon color (LinkedIn blue) */
+  color: #0077b5;
   transition: color 0.3s ease;
 }
 
-/* Color match by brand (optional but looks polished) */
-.contact-info a[href^="mailto:"] i {
-  color: #d44638; /* Gmail red */
-}
-.contact-info a[href*="github.com"] i {
-  color: #333; /* GitHub black */
-}
-.contact-info a[href*="linkedin.com"] i {
-  color: #0077b5; /* LinkedIn blue */
+.contact-info a[href^="mailto:"] i { color: #d44638; }
+.contact-info a[href*="github.com"] i { color: #333; }
+.contact-info a[href*="linkedin.com"] i { color: #0077b5; }
+
+.contact-info a:hover { color: #0077b5; }
+.contact-info a:hover i { color: #00aaff; }
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 1.5em;
+  font-size: 22px;
 }
 
-/* Hover effects */
-.contact-info a:hover {
-  color: #0077b5;
+.profile-pic-wrapper {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-.contact-info a:hover i {
-  color: #00aaff;
+
+.profile-pic-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate3d(2.5px, 12px, 0); /* this moves the image inside the circle */
 }
+
 
 		.info-block {
 			display: flex;
@@ -95,229 +104,164 @@
 			align-items: flex-start;
 		}
 
-		.info-block div {
-			width: 100%;
-		}
-	
-		.info-block .date-location {
-			text-align: right;
-		}
+		.info-block div { width: 100%; }
+		.info-block .date-location { text-align: right; }
 
 		@media only screen and (min-width: 800px) {
-			.info-block div {
-				width: 48%;
-			}
-			.info-block ul {
-			width: 150%;
-			}	
-
-			.container {
-				margin-left: 20%;
-				margin-right: 20%;
-			}
+			.info-block div { width: 48%; }
+			.info-block ul { width: 150%; }
+			.container { margin-left: 20%; margin-right: 20%; }
 		}
 
 		@media only screen and (max-width: 800px) {
-			.container {
-				margin-left: 1%;
-				margin-right: 1%;
-			}
-			.info-block ul {
-			width: 100%;
-		}
+			.container { margin-left: 1%; margin-right: 1%; }
+			.info-block ul { width: 100%; }
 		}
 
-		.container {
-			border-bottom: 1px solid;
-		}
+		.container { border-bottom: 1px solid; }
         .project-images {
-  display: flex;
-  gap: 1rem; /* optional spacing between images */
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
+          display: flex;
+          gap: 1rem;
+          align-items: flex-start;
+          flex-wrap: wrap;
+        }
 
-.project-image img {
-  height: 400px; /* or any height that fits your layout */
-  object-fit: contain;
-  border-radius: 8px; /* optional, for rounded corners */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* optional, for a subtle shadow */
-}
+        .project-image img {
+          height: 400px;
+          object-fit: contain;
+          border-radius: 8px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
 
-.degree-list {
-  list-style: none;
-  padding-left: 1.5em;
-}
+        .degree-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
 
+      .degree-list .thesis-item {
+        list-style-type: disc;
+        margin-left: 2em;
+        display: list-item;
+        width: 100%;
+       }
 
-.school-location {
-  font-size: 0.9em;
-  color: #555;
-}
-
+        .school-location {
+          font-size: 0.9em;
+          color: #555;
+        }
 	</style>
 	<title>Erik Råberg</title>
 </head>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRE0K85F64"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TRE0K85F64');
+</script>
+
 <body>
-  <div class="container">
-    <h1>Erik Råberg</h1>
-    <div class="contact-info">
-      <a href="mailto:erik.j.raberg@gmail.com">
-        <i class="fas fa-envelope"></i> erik.j.raberg@gmail.com
-      </a>
-      <a href="https://github.com/eybro/">
-        <i class="fab fa-github"></i> github.com/eybro
-      </a>
-      <a href="https://www.linkedin.com/in/erik-raberg/">
-        <i class="fab fa-linkedin"></i> linkedin.com/in/erik-raberg
-      </a>
-    </div>
-
-    <h2>Education</h2>
-    <ul>
-     <li class="info-block">
-        <div>
-            <strong>KTH Royal Institute of Technology</strong><br>
-            <span class="school-location">Stockholm, Sweden</span>
-            <ul class="degree-list">
-            <li><em>M.Sc. Industrial Engineering and Management</em> — Machine Learning Track</li>
-            <li><em>B.Sc. Industrial Engineering and Management</em> — Computer Science Track</li>
-            </ul>
-        </div>
-        <div class="date-location">
-            Aug 2020 – Jun 2025
-        </div>
-        </li>
-      <li class="info-block">
-  <div>
-    <strong>Politecnico di Milano</strong><br>
-    <span class="school-location">Milan, Italy</span>
-    <ul class="degree-list">
-      <li><em>Erasmus Exchange</em> — Computer Science & Management Engineering</li>
-    </ul>
+<div class="container">
+  <div class="profile-header" style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+  <h1 style="margin: 0;">Erik Råberg</h1>
+  <div class="profile-pic-wrapper">
+  <img src="image.png" alt="Erik Råberg Portrait">
+</div>
+</div>
+  <div class="contact-info">
+    <a href="mailto:erik.j.raberg@gmail.com"><i class="fas fa-envelope"></i> erik.j.raberg@gmail.com</a>
+    <a href="https://github.com/eybro/"><i class="fab fa-github"></i> github.com/eybro</a>
+    <a href="https://www.linkedin.com/in/erik-raberg/"><i class="fab fa-linkedin"></i> linkedin.com/in/erik-raberg</a>
+    <a href="CV_Erik_Raberg.pdf" download><i class="fas fa-download"></i> Download CV</a>
   </div>
-  <div class="date-location">
-    Feb 2024 – Jul 2024
-  </div>
-</li>
-<li class="info-block">
-  <div>
-    <strong>Nacka Gymnasium</strong><br>
-    <span class="school-location">Nacka, Sweden</span>
-    <ul class="degree-list">
-      <li><em>Technical Sciences</em></li>
-    </ul>
-  </div>
-  <div class="date-location">
-    Aug 2017 – Jun 2020
-  </div>
-</li>
 
-    <h2>Experience</h2>
-    <ul>
-      <li class="info-block">
-        <div>
-          <strong>Product & Operations Student Worker</strong><br>
-          Fastdev AB
-          <ul>
-            <li>Jira Cloud migration for multiple clients with service portal setup.</li>
-            <li>SEO and Google Ads optimization resulting in 300% lead increase.</li>
-            <li>Product Owner for “Matilda”, an online ordering platform.</li>
-            <li>Recovered 300k SEK in missed invoicing through financial admin work.</li>
-          </ul>
-        </div>
-        <div class="date-location">
-          Mar 2022 – Jun 2025<br>
-          Stockholm, Sweden
-        </div>
-      </li>
+  <h2>Education</h2>
+  <ul>
+    <li class="info-block">
+      <div>
+        <strong>KTH Royal Institute of Technology</strong><br>
+        <span class="school-location">Stockholm, Sweden</span>
+        <ul class="degree-list">
+          <li><em>M.Sc. Industrial Engineering and Management</em> — Machine Learning Track (GPA: 4.11/5)</li>
+          <li class="thesis-item">Master’s Thesis: <em>Economical Assessment of Heavy-Duty Battery Electric Trucks in Sweden </em><br> In collaboration the Swedish National Road & Transport Research Institute (VTI).</li>
+          <li><em>B.Sc. Industrial Engineering and Management</em> — Computer Science Track (GPA: 4.24/5)</li>
+          <li class="thesis-item">Bachelor’s Thesis: <em>Conditional payments on blockchains with smart contracts and oracle solutions</em><br> In collaboration
+with the Swedish Central Bank (Riksbanken).</li>
+        </ul>
+      </div>
+      <div class="date-location">
+        Aug 2020 – Jun 2025
+      </div>
+    </li>
+    <li class="info-block">
+      <div>
+        <strong>Politecnico di Milano</strong><br>
+        <span class="school-location">Milan, Italy</span>
+        <ul class="degree-list">
+          <li><em>Erasmus Exchange</em> — Computer Science & Management Engineering</li>
+        </ul>
+      </div>
+      <div class="date-location">Feb 2024 – Jul 2024</div>
+    </li>
+    <li class="info-block">
+      <div>
+        <strong>Nacka Gymnasium</strong><br>
+        <span class="school-location">Nacka, Sweden</span>
+        <ul class="degree-list">
+          <li><em>Technical Sciences</em> (21.5/22.5)</li>
+        </ul>
+      </div>
+      <div class="date-location">Aug 2017 – Jun 2020</div>
+    </li>
+  </ul>
 
-       <li class="info-block">
-        <div>
-          <strong>Product Owner</strong><br>
-          Fastpool Sweden AB
-          <ul>
-            <li>Led releases of 2 new native apps, redesigns of 2 others, and multiple large client-requested features.</li>
-            <li>Supervised intern in Java development.</li>
-          </ul>
-        </div>
-        <div class="date-location">
-          Oct 2021 – Jun 2025<br>
-          Stockholm, Sweden
-        </div>
-      </li>
+  <h2>Experience</h2>
+  <ul>
+    <li class="info-block">
+      <div>
+        <strong>Product Owner & Product Operations</strong><br>
+        Fastpool AB & Fastdev AB
+        <ul>
+          <li>Launched 2 mobile apps via phased MVP rollout; led global agile teams.</li>
+          <li>Primary product contact for major clients, co-developed new features.</li>
+          <li>Tripled leads (Aug–Oct 2024) through SEO & Google Ads improvements.</li>
+          <li>Recovered €30k in missed invoicing via audit & client reconciliation.</li>
+          <li>Streamlined support process via Jira Cloud migration + client service portals.</li>
+        </ul>
+      </div>
+      <div class="date-location">
+        Oct 2021 – Jun 2025<br>Stockholm, Sweden
+      </div>
+    </li>
+  </ul>
 
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>pubquery.se</strong> — <a href="https://pubquery.se">pubquery.se</a><br>Student event platform with 20,000+ visits/month and 30+ partner orgs. Full-stack: Python, PHP, JS, React, Express, MySQL.</li>
+    <li><strong>YouTube Image Match</strong> — <a href="https://github.com/volumetrader/VideoFromImage">GitHub</a>, <a href="https://huggingface.co/spaces/eybro/image_video_timestamp">Demo</a><br>ML model to find YouTube video & timestamp from a screenshot using custom autoencoder.</li>
+    <li><strong>Instagram Automation</strong> — <a href="https://github.com/eybro/InstagramAutomation">GitHub</a><br>Weekly event story automation using Google Calendar API, Renderform, IG API, and GitHub Actions.</li>
+    <li><strong>Zettle Retriever</strong> — <a href="https://github.com/eybro/zettle_retriever">GitHub</a><br>Automated Zettle → Supabase pipeline with live sales display on student chapter site.</li>
+    <li><strong>Smart Contract & Oracles</strong> — <a href="https://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1792977">Bachelor’s Thesis</a><br>Smart contract and oracles for conditional payments with Sveriges Riksbank.</li>
+    <li><strong>Master Thesis</strong> (Approved, awaiting publishing)<br>Economic assessment of electric trucks in Sweden, in collaboration with VTI.</li>
+  </ul>
 
-      <li class="info-block">
-        <div>
-          <strong>Technical Support Technician</strong><br>
-          Logmaster Systems AB
-          <ul>
-            <li>Support for SQL servers, databases, and custom software/hardware both remote and onsite.</li>
-          </ul>
-        </div>
-        <div class="date-location">
-          May 2022 – Feb 2024<br>
-          Stockholm, Sweden
-        </div>
-      </li>
+  <h2>Student Engagements</h2>
+  <ul>
+    <li>IT Group Leader 2024–2025 (10 students), Photography Group Leader 2023 (15 students)</li>
+    <li>Teaching Assistant, Industrial Economics 2021–2022 (Led exercise sessions for 30+ students)</li>
+  </ul>
 
-      <li class="info-block">
-        <div>
-          <strong>Teaching Assistant, Industrial Economics</strong><br>
-          KTH Royal Institute of Technology
-          <ul>
-            <li>Led exercise sessions and graded exams after excelling in the course.</li>
-          </ul>
-        </div>
-        <div class="date-location">
-          Apr 2021 – Oct 2022<br>
-          Stockholm, Sweden
-        </div>
-      </li>
-    </ul>
-
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong>pubquery.se</strong> — <a href="https://pubquery.se">pubquery.se</a><br>
-        A student event platform with 20,000+ visits/month and 30+ partner orgs. Full-stack: Python, PHP, JS, React, Express, MySQL.
-      </li>
-      <li>
-        <strong>Video From Image</strong> — <a href="https://github.com/volumetrader/VideoFromImage">GitHub</a><br>
-        ML system to match an uploaded image to the corresponding YouTube video & timestamp via convolutional autoencoder.
-      </li>
-      <li>
-        <strong>Instagram Automation</strong> — <a href="https://github.com/eybro/InstagramAutomation">GitHub</a><br>
-        Weekly event story automation using Google Calendar API, Renderform, IG API, and GitHub Actions.
-      </li>
-      <li>
-        <strong>Zettle Retriever</strong> — <a href="https://github.com/eybro/zettle_retriever">GitHub</a><br>
-        Uses Zettle API to pull weekly sales data, syncs to Supabase, displays beer sales live on the chapter website.
-      </li>
-      <li>
-        <strong>Smart Contract & Oracles</strong> — <a href="https://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1792977&dswid=-1028">Bachelor’s Thesis</a><br>
-        Developed a smart contract and two oracles for a decentralized conditional purchase in collaboration with Sveriges Riksbank.
-      </li>
-      <li>
-        <strong>Master Thesis (Approved, waiting for publishing)</strong><br>
-        Economic assessment of heavy-duty battery electric trucks in Sweden, in collaboration with VTI.
-      </li>
-    </ul>
-
-    <h2>Other Engagements</h2>
-    <ul>
-      <li>
-        <strong>Student Chapter:</strong> Student Buddy (2022–2024), Marketing Group (2021–2025), IT Group Responsible (2024–2025), Photography Group Responsible (2023–2024)
-      </li>
-    </ul>
-
-    <h2>Languages</h2>
-    <ul>
-      <li>Swedish: Native</li>
-      <li>English: Fluent</li>
-      <li>German: Currently studying</li>
-    </ul>
-  </div>
+  <h2>Skills & Tools</h2>
+  <ul>
+    <li><strong>Languages:</strong> Swedish (Native), English (Fluent), German (Learning)</li>
+    <li><strong>Programming:</strong> Python, JavaScript, Java, SQL, HTML/CSS, Git, Selenium, MATLAB</li>
+    <li><strong>Tools:</strong> Jira, Trello, Confluence, Figma, Excel, PowerPoint</li>
+    <li><strong>Product:</strong> Agile, MVP, Roadmaps, Backlog Management</li>
+    <li><strong>Business:</strong> Financial Modeling, Stakeholder Management, Marketing</li>
+  </ul>
+</div>
 </body>
+</html>
