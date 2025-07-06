@@ -96,6 +96,19 @@
   transform: translate3d(2.5px, 12px, 0); /* this moves the image inside the circle */
 }
 
+.meeting-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.meeting-link:hover {
+  color: #0077b5;
+  border-color: #0077b5;
+}
+
 
 		.info-block {
 			display: flex;
@@ -106,6 +119,8 @@
 
 		.info-block div { width: 100%; }
 		.info-block .date-location { text-align: right; }
+
+    
 
 		@media only screen and (min-width: 800px) {
 			.info-block div { width: 48%; }
@@ -171,12 +186,25 @@
   <img src="image.png" alt="Erik Råberg Portrait">
 </div>
 </div>
+
   <div class="contact-info">
     <a href="mailto:erik.j.raberg@gmail.com"><i class="fas fa-envelope"></i> erik.j.raberg@gmail.com</a>
     <a href="https://github.com/eybro/"><i class="fab fa-github"></i> github.com/eybro</a>
     <a href="https://www.linkedin.com/in/erik-raberg/"><i class="fab fa-linkedin"></i> linkedin.com/in/erik-raberg</a>
     <a href="CV_Erik_Raberg.pdf" download><i class="fas fa-download"></i> Download CV</a>
   </div>
+
+
+<h2>About me</h2>
+<ul>
+    <div>
+      I'm passionate about technology and business and especially where these intersect. I’ve worked as a Product Owner for multiple SaaS solutions in international, cross-functional teams. I'm also the founder and developer of <a href="https://pubquery.se" target="_blank">pubquery.se</a>, a student event platform used by 30+ organizations.
+      <br><br>
+     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <a href="" class="meeting-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/erik-j-raberg/30min'});return false;">📅 Book a meeting with me</a>
+    </div>
+</ul>
 
   <h2>Education</h2>
   <ul>
@@ -244,7 +272,7 @@ with the Swedish Central Bank (Riksbanken).</li>
     <li><strong>YouTube Image Match</strong> — <a href="https://github.com/volumetrader/VideoFromImage">GitHub</a>, <a href="https://huggingface.co/spaces/eybro/image_video_timestamp">Demo</a><br>ML model to find YouTube video & timestamp from a screenshot using custom autoencoder.</li>
     <li><strong>Instagram Automation</strong> — <a href="https://github.com/eybro/InstagramAutomation">GitHub</a><br>Weekly event story automation using Google Calendar API, Renderform, IG API, and GitHub Actions.</li>
     <li><strong>Zettle Retriever</strong> — <a href="https://github.com/eybro/zettle_retriever">GitHub</a><br>Automated Zettle → Supabase pipeline with live sales display on student chapter site.</li>
-    
+
   </ul>
 
   <h2>Student Engagements</h2>
