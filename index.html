@@ -1,294 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
-	<link rel="icon" href="favicon.ico" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>erik råberg</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Courier New", monospace;
+      color: white;
+      background: black;
+      overflow-x: hidden;
+    }
 
-	<style>
-		body {
-			font-family: 'Merriweather', Times, serif;
-			margin: 2em;
-		}
+    /* Retro star background */
+    .stars {
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, #4e7bff 2px, transparent 1px);
+      background-size: 30px 30px;
+      opacity: 0.35;
+      z-index: -1;
+    }
 
-		h1 {
-			font-size: 4em;
-			text-align: center;
-		}
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      letter-spacing: 0.5rem;
+      margin-top: 80px;
+    }
 
-		h2 {
-			border-bottom: 1px solid;
-		}
+    .mountain {
+      color: #7ca6ff;
+      font-size: 1rem;
+      text-align: center;
+      margin-top: 30px;
+      opacity: 0.9;
+      position: relative;
+    }
 
-		ul {
-			list-style-type: circle;
-			padding-left: 1em;
-		}
-
-		ul li {
-			margin-top: 1em;
-		}
-
-.contact-info div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+    /* Skier */
+    .skier {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffdf7f;
+  font-size: 2rem;
+  animation: ski-zigzag 6s linear infinite;
+  pointer-events: none;
 }
 
-.contact-info {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
+@keyframes ski-zigzag {
+    0%   { transform: translate(-50%, 0); }
+    20%  { transform: translate(-30%, 25px); }
+    40%  { transform: translate(-60%, 50px); }
+    60%  { transform: translate(-20%, 70px); }
+    80%  { transform: translate(-70%, 80px); }
+    100% { transform: translate(-10%, 85px); }
+  }
 
-.contact-info a {
-  text-decoration: none;
-  color: #1a1a1a;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  transition: color 0.3s ease;
-}
+    .info {
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 40px;
+    }
 
-.contact-info a i {
-  margin-right: 8px;
-  color: #0077b5;
-  transition: color 0.3s ease;
-}
+    a {
+      color: #7ca6ff;
+      text-decoration: none;
+    }
 
-.contact-info a[href^="mailto:"] i { color: #d44638; }
-.contact-info a[href*="github.com"] i { color: #333; }
-.contact-info a[href*="linkedin.com"] i { color: #0077b5; }
+    a:hover {
+      text-decoration: underline;
+    }
 
-.contact-info a:hover { color: #0077b5; }
-.contact-info a:hover i { color: #00aaff; }
+    .icon-link {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
 
-.profile-header {
-  text-align: center;
-  margin-bottom: 1.5em;
-  font-size: 22px;
-}
-
-.profile-pic-wrapper {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid #000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.profile-pic-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: translate3d(2.5px, 12px, 0); /* this moves the image inside the circle */
-}
-
-.meeting-link {
-  font-weight: bold;
-  text-decoration: none;
-  color: #1a1a1a;
-  border-bottom: 1px solid #1a1a1a;
-  transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-.meeting-link:hover {
-  color: #0077b5;
-  border-color: #0077b5;
-}
-
-
-		.info-block {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: flex-start;
-		}
-
-		.info-block div { width: 100%; }
-		.info-block .date-location { text-align: right; }
-
-    
-
-		@media only screen and (min-width: 800px) {
-			.info-block div { width: 48%; }
-			.info-block ul { width: 150%; }
-			.container { margin-left: 20%; margin-right: 20%; }
-		}
-
-		@media only screen and (max-width: 800px) {
-			.container { margin-left: 1%; margin-right: 1%; }
-			.info-block ul { width: 100%; }
-		}
-
-		.container { border-bottom: 1px solid; }
-        .project-images {
-          display: flex;
-          gap: 1rem;
-          align-items: flex-start;
-          flex-wrap: wrap;
-        }
-
-        .project-image img {
-          height: 400px;
-          object-fit: contain;
-          border-radius: 8px;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .degree-list {
-        list-style: none;
-        padding-left: 0;
-        margin: 0;
-      }
-
-      .degree-list .thesis-item {
-        list-style-type: disc;
-        margin-left: 2em;
-        display: list-item;
-        width: 100%;
-       }
-
-        .school-location {
-          font-size: 0.9em;
-          color: #555;
-        }
-	</style>
-	<title>Erik Råberg</title>
+    .icon-link svg {
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+  </style>
 </head>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRE0K85F64"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TRE0K85F64');
-</script>
-
 <body>
-<div class="container">
-  <div class="profile-header" style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <h1 style="margin: 0;">Erik Råberg</h1>
-  <div class="profile-pic-wrapper">
-  <img src="image.png" alt="Erik Råberg Portrait">
-</div>
-</div>
+  <div class="stars"></div>
 
-  <div class="contact-info">
-    <a href="mailto:erik.j.raberg@gmail.com"><i class="fas fa-envelope"></i> erik.j.raberg@gmail.com</a>
-    <a href="https://github.com/eybro/"><i class="fab fa-github"></i> github.com/eybro</a>
-    <a href="https://www.linkedin.com/in/erik-raberg/"><i class="fab fa-linkedin"></i> linkedin.com/in/erik-raberg</a>
-    <a href="CV_Erik_Raberg.pdf" download><i class="fas fa-download"></i> Download CV</a>
+  <h1>erik råberg</h1>
+
+  <div class="mountain">
+
+    <!-- SKIER ANIMATION -->
+    <pre class="skier">⛷️</pre>
+
+<pre>
+        /\\\\\\
+       /  \\   \\
+      /    \\    \\
+     /      \\     \\
+    /        \\       \\
+</pre>
   </div>
 
+  <div class="box"></div>
 
-<h2>About me</h2>
-<ul>
-    <div>
-      I'm passionate about technology and business and especially where these intersect. I’ve worked as a Product Owner for multiple SaaS solutions in international, cross-functional teams. I'm also the founder and developer of <a href="https://pubquery.se" target="_blank">pubquery.se</a>, a student event platform used by 30+ organizations.
-      <br><br>
-     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <a href="" class="meeting-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/erik-j-raberg/30min'});return false;">📅 Book a meeting with me</a>
-    </div>
-</ul>
+  <div class="info">
+    St. Gallen, Switzerland<br><br>
 
-  <h2>Education</h2>
-  <ul>
-    <li class="info-block">
-      <div>
-        <strong>KTH Royal Institute of Technology</strong><br>
-        <span class="school-location">Stockholm, Sweden</span>
-        <ul class="degree-list">
-          <li><em>M.Sc. Industrial Engineering and Management</em> — Machine Learning Track (GPA: 4.11/5)</li>
-          <li class="thesis-item">Master’s Thesis: <em>Economical Assessment of Heavy-Duty Battery Electric Trucks in Sweden </em><br> In collaboration the Swedish National Road & Transport Research Institute (VTI).</li>
-          <li><em>B.Sc. Industrial Engineering and Management</em> — Computer Science Track (GPA: 4.24/5)</li>
-          <li class="thesis-item">Bachelor’s Thesis: <em>Conditional payments on blockchains with smart contracts and oracle solutions</em><br> In collaboration
-with the Swedish Central Bank (Riksbanken).</li>
-        </ul>
-      </div>
-      <div class="date-location">
-        Aug 2020 – Jun 2025
-      </div>
-    </li>
-    <li class="info-block">
-      <div>
-        <strong>Politecnico di Milano</strong><br>
-        <span class="school-location">Milan, Italy</span>
-        <ul class="degree-list">
-          <li><em>Erasmus Exchange</em> — Computer Science & Management Engineering</li>
-        </ul>
-      </div>
-      <div class="date-location">Feb 2024 – Jul 2024</div>
-    </li>
-    <li class="info-block">
-      <div>
-        <strong>Nacka Gymnasium</strong><br>
-        <span class="school-location">Nacka, Sweden</span>
-        <ul class="degree-list">
-          <li><em>Technical Sciences</em> (21.5/22.5)</li>
-        </ul>
-      </div>
-      <div class="date-location">Aug 2017 – Jun 2020</div>
-    </li>
-  </ul>
+    <a class="icon-link" href="https://github.com/eybro" target="_blank">
+      <img src="github.svg" width="20" style="vertical-align: middle; margin-right: 8px;">
+      github.com/eybro
+    </a><br><br>
 
-  <h2>Experience</h2>
-  <ul>
-    <li class="info-block">
-      <div>
-        <strong>Product Owner & Product Operations</strong><br>
-        Fastpool AB & Fastdev AB
-        <ul>
-          <li>Launched 2 mobile apps via phased MVP rollout; led global agile teams.</li>
-          <li>Primary product contact for major clients, co-developed new features.</li>
-          <li>Tripled leads (Aug–Oct 2024) through SEO & Google Ads improvements.</li>
-          <li>Recovered €30k in missed invoicing via audit & client reconciliation.</li>
-          <li>Streamlined support process via Jira Cloud migration + client service portals.</li>
-        </ul>
-      </div>
-      <div class="date-location">
-        Oct 2021 – Jun 2025<br>Stockholm, Sweden
-      </div>
-    </li>
-  </ul>
+   <a class="icon-link" href="https://www.instagram.com/erikraberg" target="_blank">
+      <img src="instagram.svg" width="20" style="vertical-align: middle; margin-right: 8px;">
+      @erikraberg
+    </a><br><br>
 
-  <h2>Projects</h2>
-  <ul>
-    <li><strong>pubquery.se</strong> — <a href="https://pubquery.se">pubquery.se</a><br>Student event platform with 20,000+ visits/month and 30+ partner orgs. Full-stack: Python, PHP, JS, React, Express, MySQL.</li>
-    <li><strong>YouTube Image Match</strong> — <a href="https://github.com/volumetrader/VideoFromImage">GitHub</a>, <a href="https://huggingface.co/spaces/eybro/image_video_timestamp">Demo</a><br>ML model to find YouTube video & timestamp from a screenshot using custom autoencoder.</li>
-    <li><strong>Instagram Automation</strong> — <a href="https://github.com/eybro/InstagramAutomation">GitHub</a><br>Weekly event story automation using Google Calendar API, Renderform, IG API, and GitHub Actions.</li>
-    <li><strong>Zettle Retriever</strong> — <a href="https://github.com/eybro/zettle_retriever">GitHub</a><br>Automated Zettle → Supabase pipeline with live sales display on student chapter site.</li>
-
-  </ul>
-
-  <h2>Student Engagements</h2>
-  <ul>
-    <li>IT Group Leader 2024–2025 (10 students), Photography Group Leader 2023 (15 students)</li>
-    <li>Teaching Assistant, Industrial Economics 2021–2022 (Led exercise sessions for 30+ students)</li>
-  </ul>
-
-  <h2>Skills & Tools</h2>
-  <ul>
-    <li><strong>Languages:</strong> Swedish (Native), English (Fluent), German (Learning)</li>
-    <li><strong>Programming:</strong> Python, JavaScript, Java, SQL, HTML/CSS, Git, Selenium, MATLAB</li>
-    <li><strong>Tools:</strong> Jira, Trello, Confluence, Figma, Excel, PowerPoint</li>
-    <li><strong>Product:</strong> Agile, MVP, Roadmaps, Backlog Management</li>
-    <li><strong>Business:</strong> Financial Modeling, Stakeholder Management, Marketing</li>
-  </ul>
-</div>
+    <a class="icon-link" href="https://pubquery.se" target="_blank">
+      pubquery.se
+    </a><br><br>
+  </div>
 </body>
 </html>
